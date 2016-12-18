@@ -40,7 +40,7 @@ dag = DAG('MCWork', default_args=default_args, schedule_interval='*/10 * * * *')
 
 t1 = BashOperator(
     task_id='syncMarketingCloud',
-    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/mcmcmc.py',
+    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/syncMarketingCloud.py',
     dag=dag)
 
 t2 = BashOperator(
@@ -50,12 +50,12 @@ t2 = BashOperator(
 
 t3 = BashOperator(
     task_id='EDM',
-    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/edmList.py',
+    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/EDM.py',
     dag=dag)
 
 t4 = BashOperator(
     task_id='SMS',
-    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/mcSMSHotDog.py',
+    bash_command='/Users/eztable/workspace/script/RED_ENV/bin/python /Users/eztable/workspace/script/SMS.py',
     dag=dag)
 
 
