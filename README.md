@@ -15,12 +15,18 @@
 更新 Subscriber 改用 FTP 上傳，並且設定好更新 Subscriber 的規則，一上傳成功就會觸發更新。等待更新完成再來發信。但就是等待更新這件事情讓我很感冒，非常不想要在程式碼裡面加入等待的機制，而最基本的 cron 不容易建立 job 與 job 之間的依賴性關係，最後決定採用 Airbnb 開源的 Airflow。
 
 Airflow 有很多很棒的優點：
-視覺化呈現工作狀態、相依性、執行時間
-和各種服務整合（mysql、postgresql、s3、hive、slack...）
-集中日誌功能
-失敗/成功寄信
-設置失敗重試次數
+- 視覺化呈現工作狀態、相依性、執行時間
+- 和各種服務整合（mysql、postgresql、s3、hive、slack...）
+- 集中日誌功能
+- 失敗/成功寄信
+- 設置失敗重試次數
 
+[![主頁面](https://s23.postimg.org/keow4018r/2016_12_18_10_03_28.png)](https://postimg.org/image/rhwrjm6o7/)
+[![Detail & Log](https://s29.postimg.org/kp2dn2mmv/2016_12_18_09_46_27.png)](https://postimg.org/image/gsp1r31n7/)
+[![圖像呈現相依性](https://s23.postimg.org/ua7vhlb7v/2016_12_18_09_47_25.png)](https://postimg.org/image/dmgdf3gg7/)
+[![螢幕截圖 2016-12-18 09.47.40.png](https://s23.postimg.org/n2o9m5qaj/2016_12_18_09_47_40.png)](https://postimg.org/image/vkxpqhwt3/)
+[![甘特圖](https://s23.postimg.org/acre13suz/2016_12_18_09_53_36.png)](https://postimg.org/image/uk4tteqc7/)
+[![執行時間](https://s29.postimg.org/dd1j1bdl3/2016_12_18_09_48_05.png)](https://postimg.org/image/b8h608byb/)
 ```python
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
