@@ -1,4 +1,4 @@
-# airflow-introduction
+# airflow-introduction - 紅包飛起來啦！當紅包遇到 Airflow 
 ## 前言
 最近 EZTABLE 因應[紅包](https://tw.eztable.com/red-envelope/grab/Mzk2NTg5OF8xNDgyMjQ3NjQ1MDAw)活動，經過幾個版本的迭代，其實已經轉變成一個 referral 行銷活動，只不過是以紅包來包裝的 ，就像是 Uber、Airbnb 等公司吸引新會員的方法一樣。為了提高抽中紅包與發紅包的人參與感，我們需要為活動建立多個增加轉換率的事件漏斗，包含電視廣告、平面廣告等實體的管道進行曝光，並且透過網路廣告、EDM 與 SMS 等方式直接介紹 EZTABLE 是什麼，有什麼東西可以買。
 
